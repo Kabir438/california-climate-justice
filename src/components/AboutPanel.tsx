@@ -17,7 +17,7 @@ export function AboutPanel({ onClose }: AboutPanelProps) {
         initial={{ y: 18, opacity: 0 }}
       >
         <div className="flex items-start justify-between gap-4">
-          <h2 className="text-3xl font-bold text-[var(--text-primary)]">The Theory Behind the Map</h2>
+          <h2 className="text-3xl font-bold text-[var(--text-primary)]">About This Artifact</h2>
           <button
             className="rounded border border-[var(--border)] px-3 py-1.5 text-sm text-[var(--text-secondary)] hover:text-white"
             onClick={onClose}
@@ -28,45 +28,55 @@ export function AboutPanel({ onClose }: AboutPanelProps) {
         </div>
 
         <div className="mt-7 space-y-6">
-          <section className="rounded-md border border-[var(--border)] bg-[var(--bg-2)] p-5">
-            <h3 className="text-lg font-semibold text-[var(--text-primary)]">Chen (2019): information access is justice</h3>
-            <blockquote className="mt-3 border-l-2 border-[var(--accent-critical)] pl-4 text-sm leading-7 text-[var(--text-secondary)]">
-              "It feels really unjust, that just because you don't speak English fluently... it doesn't mean you
-              shouldn't know this information."
-            </blockquote>
-            <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">
-              The map treats linguistic isolation as a climate vulnerability because warnings, evacuation orders, air
-              quality alerts, and public hearings are only protective when communities can access them.
-            </p>
+          <section>
+            <h3 className="text-lg font-semibold text-[var(--text-primary)]">Definitions</h3>
+            <dl className="mt-3 grid gap-3 text-sm leading-7 text-[var(--text-secondary)]">
+              <div className="rounded-md border border-[var(--border)] bg-[var(--bg-2)] p-4">
+                <dt className="font-semibold text-[var(--text-primary)]">Particulate Matter</dt>
+                <dd className="mt-1">2.5 microns or smaller in diameter.</dd>
+              </div>
+              <div className="rounded-md border border-[var(--border)] bg-[var(--bg-2)] p-4">
+                <dt className="font-semibold text-[var(--text-primary)]">Linguistically Isolated Household</dt>
+                <dd className="mt-1">A household where no one over the age of 14 speaks English very well.</dd>
+              </div>
+            </dl>
           </section>
 
           <section className="rounded-md border border-[var(--border)] bg-[var(--bg-2)] p-5">
-            <h3 className="text-lg font-semibold text-[var(--text-primary)]">Baer (2021): the treadmill of production</h3>
+            <h3 className="text-lg font-semibold text-[var(--text-primary)]">Chen</h3>
             <blockquote className="mt-3 border-l-2 border-[var(--accent-critical)] pl-4 text-sm leading-7 text-[var(--text-secondary)]">
-              "The capitalist drive for profit making results in a perpetual treadmill of production and consumption
-              heavily reliant on fossil fuels."
+              Take Imperial County: 24 per cent of households there are linguistically isolated. It also has the
+              state’s highest pollution burden score and 95 days a year in excess of 95 degrees.
             </blockquote>
-            <p className="mt-3 text-sm leading-7 text-[var(--text-secondary)]">
-              The bivariate map spatializes that treadmill: logistics corridors, refineries, industrial agriculture, and
-              housing inequality appear as overlapping climate and health burdens.
-            </p>
+          </section>
+
+          <section className="rounded-md border border-[var(--border)] bg-[var(--bg-2)] p-5">
+            <h3 className="text-lg font-semibold text-[var(--text-primary)]">Baer</h3>
+            <blockquote className="mt-3 border-l-2 border-[var(--accent-critical)] pl-4 text-sm leading-7 text-[var(--text-secondary)]">
+              Inland Empire, where diesel trucks run over a million trips a week in counties that are 50 to 55 per
+              cent Latino, I was seeing that treadmill laid out geographically. The r = 0.68 correlation between percent
+              Latino and the CalEnviroScreen. This supports Baer’s argument that under capitalism, the costs of
+              production get deposited onto the communities with the least power to refuse them.
+            </blockquote>
           </section>
 
           <section>
             <h3 className="text-lg font-semibold text-[var(--text-primary)]">Why This Medium</h3>
             <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
-              An interactive digital map enables systems thinking through exploration. Instead of reading a list of
-              disconnected examples, viewers can directly see overlapping burdens and then test relationships through
-              live correlation views.
+              An interactive map lets the audience discover the pattern themselves - which is more convincing than
+              being told what to think.
             </p>
           </section>
 
           <section>
             <h3 className="text-lg font-semibold text-[var(--text-primary)]">Audience</h3>
-            <p className="mt-2 text-sm leading-7 text-[var(--text-secondary)]">
-              This artifact is designed for college students and young adults who understand that climate change is
-              serious, but have not yet connected it to race, class, language access, and structural policy.
-            </p>
+            <ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-7 text-[var(--text-secondary)]">
+              <li>The artifact is aimed at college students and young adults of my own age.</li>
+              <li>
+                I put it together for people who know the gravity of climate change but have not necessarily made the
+                link to housing, labor, race or political power.
+              </li>
+            </ul>
           </section>
         </div>
       </motion.section>
